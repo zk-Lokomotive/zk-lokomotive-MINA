@@ -17,11 +17,11 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 **Detailed Design/Architecture:**
 
 **Mina-EVM File Transfer:**
-- Cross-Chain Bridge:**
+- Cross-Chain Bridge:
   - The transmitter encrypts the file with [zk-SNARK] o1js (merkle tree contract) and verifies it in the MINA network.
   - The files to be sent are tagged in IPFS in 256kb packets and the hash is transmitted over the MINA network.
   - After the files are verified on the network with zk, the receiver can pull the necessary files from IPFS.
-- Wormhole Integration:**
+- Wormhole Integration:
   - Transfer tokenized files using Wormhole to facilitate cross-chain communication.
   - Verify the file using zk-SNARK proof when receiving it into the EVM network.
   - Retrieve the file from IPFS and verify its integrity using zk-SNARK proof.
@@ -100,8 +100,8 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 ### Risks & Mitigations
 
 **Risks:**
-- Technical Challenges:** Difficulties in implementing zk-SNARKs and cross-chain communication and scarcity of examples.
-- Adoption:** Ensuring the solution is user-friendly and widely adopted.
+- Technical Challenges: Difficulties in implementing zk-SNARKs and cross-chain communication and scarcity of examples.
+- Adoption: Ensuring the solution is user-friendly and widely adopted.
   
 <img width="826" alt="Ekran Resmi 2024-04-21 15 30 34" src="https://github.com/zk-Lokomotive/zk-lokomotive-MINA/assets/158029357/1be571dd-0f26-4a2f-8d61-069a82f03ec7">
 
