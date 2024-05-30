@@ -1,3 +1,4 @@
+
 #### Proposal Title:
 zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 ![Logo](https://github.com/zk-Lokomotive/zk-lokomotive-MINA/assets/158029357/0a46fdde-4c8a-434f-a869-fd5740b63fac)
@@ -6,11 +7,11 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 
 **Problem:** Traditional file transfer services lack sufficient privacy and security, especially for sensitive data. Centralized servers bring risks of data breaches and privacy violations.
 
-**Solution:** zk-Lokomotive aims to create a secure and efficient file transfer system using ZK proofs, IPFS and Wormhole by combining Mina and Ethereum networks. This ensures file integrity and confidentiality, facilitates decentralized storage and enables cross-chain data transfer. Unlike traditional cryptographic solutions, the hashes sent to verify the integrity of the file or the authenticity of the origin are sent to a central server instead of a centralized server. By eliminating the "trust factor" completely, we aim to enable the companies or institutions we serve to transmit files in a confidential, secure and verifiable manner.
+**Solution:** zk-Lokomotive aims to create a secure and efficient file transfer system using ZK proofs, Arweave, and Wormhole by combining Mina and Ethereum networks. This ensures file integrity and confidentiality, facilitates decentralized storage, and enables cross-chain data transfer. Unlike traditional cryptographic solutions, the hashes sent to verify the integrity of the file or the authenticity of the origin are sent to a decentralized server instead of a centralized server. By eliminating the "trust factor" completely, we aim to enable the companies or institutions we serve to transmit files in a confidential, secure, and verifiable manner.
 
 **Impact:** This project extends and enhances the Mina ecosystem by opening it to EVM-based users by enabling secure file transfers using zk-SNARKs, encouraging adoption, providing improved tools, and attracting more users and developers. Enables new applications for secure data sharing in blockchain ecosystems.
 
-**Audience:** The target audience consists of researchers, developers and enterprises that need secure and verifiable file transfers.
+**Audience:** The target audience consists of researchers, developers, and enterprises that need secure and verifiable file transfers.
 
 ### Architecture & Design
 
@@ -19,19 +20,20 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 **Mina-EVM File Transfer:**
 - Cross-Chain Bridge:
   - The transmitter encrypts the file with [zk-SNARK] o1js (merkle tree contract) and verifies it in the MINA network.
-  - The files to be sent are tagged in IPFS in 256kb packets and the hash is transmitted over the MINA network.
-  - After the files are verified on the network with zk, the receiver can pull the necessary files from IPFS.
+  - The files to be sent are tagged in Arweave in 100-MB packets and the hash is transmitted over the MINA network.
+  - After the files are verified on the network with zk, the receiver can pull the necessary files from Arweave.
 - Wormhole Integration:
   - Transfer tokenized files using Wormhole to facilitate cross-chain communication.
   - Verify the file using zk-SNARK proof when receiving it into the EVM network.
-  - Retrieve the file from IPFS and verify its integrity using zk-SNARK proof.
+  - Retrieve the file from Arweave and verify its integrity using zk-SNARK proof.
 
-**IPFS Integration:**
-- **File Storage:** Use IPFS for decentralized file storage. Encrypt files before uploading and store the resulting hash on Mina.
-- **Proof Verification:** Retrieve files from IPFS using hash and verify their integrity with the provided zk-SNARK proof.
-**IPFS Integration:**
-- **File Storage:** Use IPFS for decentralized file storage. Encrypt files before uploading and store the resulting hash on Mina.
-- **Proof Verification:** Retrieve files from IPFS using hash and verify their integrity with the provided zk-SNARK proof.
+**Arweave Integration:**
+- **File Storage:** Use Arweave for decentralized file storage. Encrypt files before uploading and store the resulting hash on Mina.
+- **Proof Verification:** Retrieve files from Arweave using hash and verify their integrity with the provided zk-SNARK proof.
+
+**Celestia Integration:**
+- **Data Layer Security:** Use Celestia for maintaining secure and "live" data during transfer processes.
+- **Data Availability:** Ensure that data remains available and secure during and after transfer using Celestia's capabilities.
 
 ### Vision
 
@@ -50,8 +52,8 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 
 **Deliverables:**
 - Secure file transfer system between Mina and EVM networks.
-- Wormhole contracts, the most optimized system for crosschain.
-- IPFS integration for decentralized storage.
+- Wormhole contracts, the most optimized system for cross-chain.
+- Arweave integration for decentralized storage.
 - User interface for easy file transfer.
 - Detailed documentation and tutorials.
 
@@ -63,13 +65,13 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 - 3M - 6M
 
 **Budget Requested:** 
-- 50,000 MINA (standart) 
+- 50,000 MINA (standard) 
 - 100,000 MINA (advanced) [Mobile App]
 
 **Budget Breakdown:**
 - Development: 65,000 MINA
 - Test: 5,000 MINA
-- Documentation 5,000 MINA
+- Documentation: 5,000 MINA
 - Infrastructure: 15,000 MINA
 - Other & Unexpected: 10,000 MINA
 
@@ -87,7 +89,7 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 **Team Members:**
 - Baturalp Güvenç: Founder | Dev (Github: [BaturalpGuvenc](https://github.com/virjilakrum))
 - Ferit Yiğit Balaban: CTO | Dev (Github: [Yiğid Balaban](https://github.com/fybx))
-- Additional team members will be added where necessary for development, testing and documentation.
+- Additional team members will be added where necessary for development, testing, and documentation.
 
 **Achievements:**
 
@@ -100,12 +102,7 @@ zk-Lokomotive: Fully Secure and Trustless Multichain File Transfer System
 ### Risks & Mitigations
 
 **Risks:**
-- Technical Challenges: Difficulties in implementing zk-SNARKs and cross-chain communication and scarcity of examples.
+- Technical Challenges: Difficulties in implementing zk-SNARKs, cross-chain communication, and scarcity of examples.
 - Adoption: Ensuring the solution is user-friendly and widely adopted.
-  
+
 <img width="826" alt="Ekran Resmi 2024-04-21 15 30 34" src="https://github.com/zk-Lokomotive/zk-lokomotive-MINA/assets/158029357/1be571dd-0f26-4a2f-8d61-069a82f03ec7">
-
-
-
-
-
